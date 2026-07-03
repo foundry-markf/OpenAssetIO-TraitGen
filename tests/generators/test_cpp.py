@@ -841,7 +841,7 @@ def docstring_for(rootnode_for, cpp_language):
             (function_definition
                 declarator: (
                     function_declarator
-                    declarator: (field_identifier) @func_name (eq? @func_name "{func}")
+                    declarator: (field_identifier) @func_name (#eq? @func_name "{func}")
                 ) @func_decl
             )
             )""")
@@ -867,7 +867,7 @@ def docstring_for(rootnode_for, cpp_language):
         query = cpp_language.query("""(parameter_list (
                    parameter_declaration declarator: (
                        reference_declarator (identifier) @var_name
-                       (eq? @var_name "defaultValue") )))""")
+                       (#eq? @var_name "defaultValue") )))""")
 
         first_has_default = bool(query.captures(first_decl))
         second_has_default = bool(query.captures(second_decl))
