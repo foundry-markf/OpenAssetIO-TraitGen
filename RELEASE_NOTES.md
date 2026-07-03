@@ -1,6 +1,15 @@
 Release Notes
 =============
 
+v1.0.0-alpha.14
+--------------
+
+### Bug fixes
+
+- Bumped `pyyaml` version from `6.0.0` to `6.0.3` since Conan restrictions
+  first added in v1.0.0-alpha.7 are no longer present and 6.0.0 is not
+  compatible with Python 3.12+.
+
 v1.0.0-alpha.13
 --------------
 
